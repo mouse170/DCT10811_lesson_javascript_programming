@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07_number</title>
+</head>
+<body>
+    <script>
+        //demo1 NaN
+        var a = 10;
+        var b = 10.1;
+        var c = "10";
+        var d = NaN;
+        console.log(isNaN(a)); // false
+        console.log(isNaN(b)); //false
+        console.log(isNaN(c)); //false
+        console.log(isNaN(d)); //true
+
+        //demo2, convert
+        //var price = "10";
+        var price = "John";
+        console.log(parseInt(price)); //NaN
+
+        var total = parseInt(price)*30;
+        console.log("Total = " + total); // Total = NaN
+
+        //demo3, Number
+        var price = "10";
+        var married = true;
+        console.log(Number(price)); //10
+        console.log(Number(married)); //1
+        </script>
+</body>
+</html>

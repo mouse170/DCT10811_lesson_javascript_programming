@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>09_symbol</title>
+</head>
+<body>
+    <script>
+        var obj = [];
+
+        obj["Hello"] = "value";
+        console.log(obj["Hello"]);
+
+        var a = Symbol();
+        var b = Symbol(); //value
+        console.log(typeof a); //symbol
+        console.log(a); //Symbol
+        console.log(a.toString()); //Symbol()
+        console.log(a == b); //false
+
+        var c = Symbol("Hello");
+        var d = Symbol("Hello");
+
+        console.log(c == d); //false
+
+        obj[a] = "value";
+        console.log(obj[a] == obj["Hello"]); //true
+
+        var obj1 = [];
+        obj1[a] = "value";
+        console.log(obj[a] == obj1[a]); //true
+
+        obj[b] = Symbol();
+        obj1[b] = Symbol();
+        console.log(obj[b] == obj1[b]); //false
+
+
+
+        </script>
+</body>
+</html>

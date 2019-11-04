@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03_dice</title>
+</head>
+
+<body>
+
+    <img id="dice1" src="images/dice-1.png" />
+    <img id="dice2" src="images/dice-1.png" />
+    <img id="dice3" src="images/dice-1.png" /><br />
+    <input id="Button1" type="button" value="骰" onclick="start();" />
+    <input id="Button2" type="button" value="停" onclick="stop();" />
+    <h3 id="result"></h3>
+
+    <img width="600" src="images/photo_e08_07.jpg" />
+    <script>
+        function start() {
+            document.getElementById("dice1").src = "images/roll.gif";
+            document.getElementById("dice2").src = "images/roll.gif";
+            document.getElementById("dice3").src = "images/roll.gif";
+        }
+
+        function stop() {
+            var msg = "開 ";
+            var num1 = Math.floor(Math.random() * 6 + 1);
+            var num2 = Math.floor(Math.random() * 6 + 1);
+            var num3 = Math.floor(Math.random() * 6 + 1);
+            //算出點數後再停
+            //停直接取值
+            var total = num1 + num2 + num3;
+            /*
+            switch (true) {
+                case num1 || num2 || num3 == 1:
+                    if (num1 == 1)
+                        document.getElementById("dice1").src = "images/dice-1.png";
+                    else if (num2 == 1)
+                        document.getElementById("dice2").src = "images/dice-1.png";
+                    else if (num3 == 1)
+                        document.getElementById("dice3").src = "images/dice-1.png";
+                    break;
+                case num1 || num2 || num3 == 2:
+                    if (num1 == 2)
+                        document.getElementById("dice1").src = "images/dice-2.png";
+                    else if (num2 == 2)
+                        document.getElementById("dice2").src = "images/dice-2.png";
+                    else if (num3 == 2)
+                        document.getElementById("dice3").src = "images/dice-2.png";
+                    break;
+                case num1 || num2 || num3 == 3:
+                    if (num1 == 3)
+                        document.getElementById("dice1").src = "images/dice-3.png";
+                    else if (num2 == 3)
+                        document.getElementById("dice2").src = "images/dice-3.png";
+                    else if (num3 == 3)
+                        document.getElementById("dice3").src = "images/dice-3.png";
+                    break;
+                case num1 || num2 || num3 == 4:
+                    if (num1 == 4)
+                        document.getElementById("dice1").src = "images/dice-4.png";
+                    else if (num2 == 4)
+                        document.getElementById("dice2").src = "images/dice-4.png";
+                    else if (num3 == 4)
+                        document.getElementById("dice3").src = "images/dice-4.png";
+                    break;
+                case num1 || num2 || num3 == 5:
+                    if (num1 == 5)
+                        document.getElementById("dice1").src = "images/dice-5.png";
+                    else if (num2 == 5)
+                        document.getElementById("dice2").src = "images/dice-5.png";
+                    else if (num3 == 5)
+                        document.getElementById("dice3").src = "images/dice-5.png";
+                    break;
+                case num1 || num2 || num3 == 6:
+                    if (num1 == 6)
+                        document.getElementById("dice1").src = "images/dice-6.png";
+                    else if (num2 == 6)
+                        document.getElementById("dice2").src = "images/dice-6.png";
+                    else if (num3 == 6)
+                        document.getElementById("dice3").src = "images/dice-6.png";
+                    break;
+            }
+            var total = num1 + num2 + num3;
+            */
+        }
+    </script>
+</body>
+
+</html>

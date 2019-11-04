@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>05_typeof</title>
 </head>
+
 <body>
     <script>
+        //demo1
         var a = 34.29;
         var b = "John";
         var c = true;
@@ -15,6 +18,16 @@
         console.log(typeof b); //boolean
         console.log(typeof c); //string
         // if (typeof a == "number") {}
-        </script>
+
+        //demo2
+        var d;
+        var e = null;
+
+        console.log(d); //undefined
+        console.log(e); //null
+        //console.log(f); // f is not defined at this
+        console.log(typeof e); //object
+    </script>
 </body>
+
 </html>

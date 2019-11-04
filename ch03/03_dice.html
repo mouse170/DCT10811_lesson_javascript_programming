@@ -31,8 +31,12 @@
             var num2 = Math.floor(Math.random() * 6 + 1);
             var num3 = Math.floor(Math.random() * 6 + 1);
             //算出點數後再停
-            //停直接取值
+            //停直接取值放圖
             var total = num1 + num2 + num3;
+
+            document.getElementById("dice1").src = "images/dice-" + num1 + ".png";
+            document.getElementById("dice2").src = "images/dice-" + num2 + ".png";
+            document.getElementById("dice3").src = "images/dice-" + num3 + ".png";
             /*
             switch (true) {
                 case num1 || num2 || num3 == 1:

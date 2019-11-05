@@ -29,6 +29,18 @@
     //     add();
     //   }
     //   test();
+    //demo3
+    (function(){
+        //function scope
+        var name = "John";
+        var age = 30;
+        function add() {
+            console.log("add..."); //add...
+
+        }
+        console.log(name + "--" + age);
+        add();
+    })();
     </script>
   </body>
 </html>

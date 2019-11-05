@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>02_rest_parameters</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //demo1
-        // function add(a, b) {
-        //     return a + b;
-        // }
-        // var result = add(add(10,20), 30);
-        // console.log(`result = ${result}`);
-        
+      //demo1
+      // function add(a, b) {
+      //     return a + b;
+      // }
+      // var result = add(add(10,20), 30);
+      // console.log(`result = ${result}`);
 
-        //demo2, arguments
-        // function add() {
-        //     var total = 0;
-        //     for (var i; i < arguments.length; i++) {
-        //         total += arguments[i];
-        //     }
-        //     return total;
-        // }
-        // var result = add(100, 20, 30);
-        // console.log("Result = " + result);
+      //demo2, arguments
+      // function add() {
+      //     var total = 0;
+      //     for (var i; i < arguments.length; i++) {
+      //         total += arguments[i];
+      //     }
+      //     return total;
+      // }
+      // var result = add(100, 20, 30);
+      // console.log("Result = " + result);
 
-        //demo3, arguments
-        // function add(name) {
-        //     var total = 0;
-        //     for (var i = 1; i < arguments.length; i++) {
-        //         total += arguments[i];
-        //     }
-        //     return name + "這次總分 = " + total;
-        // }
-        // var result = add("小明", 100, 20, 30);
-        // console.log(result);
+      //demo3, arguments
+      // function add(name) {
+      //     var total = 0;
+      //     for (var i = 1; i < arguments.length; i++) {
+      //         total += arguments[i];
+      //     }
+      //     return name + "這次總分 = " + total;
+      // }
+      // var result = add("小明", 100, 20, 30);
+      // console.log(result);
 
-        //demo4 ECMA2015 剩餘參數ㄋ.
-        function add(name, ...scores) {
-            var total = 0;
-            for (var i = 0; i < scores.length; i++) {
-                total += scores[i];
-            }
-            return name + "這次總分 = " + total; 
+      //demo4 ECMA2015 剩餘參數ㄋ.
+      // function add(name, ...scores) {
+      //     var total = 0;
+      //     for (var i = 0; i < scores.length; i++) {
+      //         total += scores[i];
+      //     }
+      //     return name + "這次總分 = " + total;
+      // }
+      // var result = add("小明", 100, 90, 30);
+      // console.log(result);
+
+      //demo5 ...
+      function add(name, ...scores) {
+        var total = 0;
+        for (var i = 0; i < scores.length; i++) {
+          total += scores[i];
         }
-        var result = add("小明", 100, 90, 30);
-        console.log(result);
-        </script>
-</body>
+        return name + "這次總分 = " + total;
+      }
+      var myScores = [100, 90, 80];
+
+      //var result = add ("小明", myScores[0], myScores[1], myScores[2]);
+      var result = add("小明", ...myScores);
+      console.log(result);
+    </script>
+  </body>
 </html>

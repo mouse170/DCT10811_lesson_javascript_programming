@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>02_destructuring</title>
+  </head>
+  <body>
+    <script>
+      let employees = ["Mary", "Candy", "Lili", "Jane"];
+      //demo1
+      //   var name1 = employees[0];
+      //   var name2 = employees[1];
+      //   var name3 = employees[2];
+      //   var name4 = employees[3];
+        //demo2
+        var name1, name2, name3, name4;
+        [name1, name2, name3, name4] = employees;
+      //test code
+      console.log(name1); //Mary
+      console.log(name2); //Candy
+      console.log(name3); //Lili
+      console.log(name4); //Jane
+    </script>
+  </body>
+</html>

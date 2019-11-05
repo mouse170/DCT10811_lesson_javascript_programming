@@ -28,14 +28,25 @@
         // console.log("Result = " + result);
 
         //demo3, arguments
-        function add(name) {
+        // function add(name) {
+        //     var total = 0;
+        //     for (var i = 1; i < arguments.length; i++) {
+        //         total += arguments[i];
+        //     }
+        //     return name + "這次總分 = " + total;
+        // }
+        // var result = add("小明", 100, 20, 30);
+        // console.log(result);
+
+        //demo4 ECMA2015 剩餘參數ㄋ.
+        function add(name, ...scores) {
             var total = 0;
-            for (var i = 1; i < arguments.length; i++) {
-                total += arguments[i];
+            for (var i = 0; i < scores.length; i++) {
+                total += scores[i];
             }
-            return name + "這次總分 = " + total;
+            return name + "這次總分 = " + total; 
         }
-        var result = add("小明", 100, 20, 30);
+        var result = add("小明", 100, 90, 30);
         console.log(result);
         </script>
 </body>

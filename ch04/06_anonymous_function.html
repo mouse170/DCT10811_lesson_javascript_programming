@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>06_anonymous_funtcion</title>
+  </head>
+  <body>
+    <script>
+      //demo1
+      function print() {
+        console.log("print...");
+      }
+      print();
+      //demo2
+      var print2 = function() {
+        console.log("print2...");
+      };
+      print2();
+      //demo3
+      var print3 = function(name) {
+        console.log("print3..." + name);
+      };
+      print3("John");
+      //demo4
+      var print4 = function(name) {
+        return "print4..." + name;
+      };
+      var result = print4("John");
+      console.log(result);
+      //demo5
+      var print5 = function(getUserName) {
+        return "Hello, " + getUserName();
+      };
+    //   var result = print5(function() {
+    //     return "Mary";
+    //   });
+      var result = print5(() => "Mary");
+      console.log(result); //Hello, Mary
+    </script>
+  </body>
+</html>

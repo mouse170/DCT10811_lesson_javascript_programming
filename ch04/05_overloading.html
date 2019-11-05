@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>05_overloading</title>
+  </head>
+  <body>
+    <script>
+      //global function
+      function operation(x, y, z) {
+        return x + y + z;
+      }
+      function operation(x, y) {
+        return x - y;
+      }
+      var result = operation(10, 20); //-10
+      console.log(result);
+      var result = operation(10, 20, 30); //-10
+      console.log(result);
+    </script>
+  </body>
+</html>

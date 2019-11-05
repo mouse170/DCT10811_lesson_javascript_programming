@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>04_array_function</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var ar = ["Mary", 100, new Date("2018/1/2")];
+      var ar = ["Mary", 100, new Date("2018/1/2")];
 
-        //demo1
-        // console.log(ar.toString()); //Mary, 100, Thu Jan 2 00:00:00 UTC 2018
-        // console.log(ar.valueOf());
-        // console.log(ar);
+      //demo1
+      // console.log(ar.toString()); //Mary, 100, Thu Jan 2 00:00:00 UTC 2018
+      // console.log(ar.valueOf());
+      // console.log(ar);
 
-        //demo2
-        // console.log(ar.join("-")); //Mary-100-Thu Jan 2 00:00:00 UTC 2018 
-        // console.log(ar.join("$")); //Mary$100$Tue Jan 02 2018 00:00:00 GMT+0800 (Taipei Standard Time) 04_array_function.html:20:17
+      //demo2
+      // console.log(ar.join("-")); //Mary-100-Thu Jan 2 00:00:00 UTC 2018
+      // console.log(ar.join("$")); //Mary$100$Tue Jan 02 2018 00:00:00 GMT+0800 (Taipei Standard Time) 04_array_function.html:20:17
 
-        //demo3 stack: FILO
-        // var ar = [];
-        // ar.push("Spring");
-        // ar.push("Summer");
-        // ar.push("Autumn");
-        // ar.push("Winter");
-        // console.log(ar.pop()); //Winter
-        // console.log(ar.pop()); //Autumn
-        // console.log(ar.pop()); //Summer
-        // console.log(ar.pop()); //Spring
-        
-        //demo4 queue: FIFO
-        var ar = [];
-        ar.push("Spring");
-        ar.push("Summer");
-        ar.push("Autumn");
-        ar.push("Winter");
+      //demo3 stack: FILO
+      // var ar = [];
+      // ar.push("Spring");
+      // ar.push("Summer");
+      // ar.push("Autumn");
+      // ar.push("Winter");
+      // console.log(ar.pop()); //Winter
+      // console.log(ar.pop()); //Autumn
+      // console.log(ar.pop()); //Summer
+      // console.log(ar.pop()); //Spring
 
-        console.log(ar.shift()); //Spring
-        console.log(ar.shift()); //Summer
-        console.log(ar.shift()); //Autumn
-        console.log(ar.shift()); //Winter
-        console.log(ar.length); //0
-        </script>
-</body>
+      //demo4 queue: FIFO
+    //   var ar = [];
+    //   ar.push("Spring");
+    //   ar.push("Summer");
+    //   ar.push("Autumn");
+    //   ar.push("Winter");
+
+    //   console.log(ar.shift()); //Spring
+    //   console.log(ar.shift()); //Summer
+    //   console.log(ar.shift()); //Autumn
+    //   console.log(ar.shift()); //Winter
+    //   console.log(ar.length); //0
+
+    //demo5 sort
+    var ar = [1, 5, 2, 6, 9];
+    console.log(ar); //1, 5, 2, 6, 9
+    ar.sort();
+    console.log(ar); //1, 2, 5, 6, 9
+    ar.reverse();
+    console.log(ar); //9, 6, 5, 2, 1
+
+    </script>
+  </body>
 </html>

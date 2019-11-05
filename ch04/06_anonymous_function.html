@@ -38,6 +38,19 @@
     //   });
       var result = print5(() => "Mary");
       console.log(result); //Hello, Mary
+      //demo6
+      var print6 = function (getUserName) {
+          return "Hello, " + getUserName();
+      }
+      var result = print6(aa);
+
+      function aa() {
+          return "aa";
+      }
+      function bb() {
+          return "bb";
+      }
+      console.log(result); //Hello, aa
     </script>
   </body>
 </html>

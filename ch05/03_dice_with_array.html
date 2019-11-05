@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>03_dice_with_array</title>
+    <script src="03_dice_with_array.js"></script>
+</head>
+<body>
+
+    <img id="dice1" src="Images/dice-1.png" />
+    <img id="dice2" src="Images/dice-1.png" />
+    <img id="dice3" src="Images/dice-1.png" /><br />
+    <input id="Button1" type="button" value="骰" onclick="start();" />
+    <input id="Button2" type="button" value="停" onclick="stop();" />
+    <h3 id="result"></h3>
+
+    <img width="600" src="Images/photo_e08_07.jpg" />
+
+    <script>
+        function start() {
+            document.getElementById("dice1").src = "Images/roll.gif";
+            document.getElementById("dice2").src = "Images/roll.gif";
+            document.getElementById("dice3").src = "Images/roll.gif";
+        }
+        function stop() {
+
+            var msg = "開 ";
+            var num1 = Math.floor(Math.random() * 6 + 1);
+            var num2 = Math.floor(Math.random() * 6 + 1);
+            var num3 = Math.floor(Math.random() * 6 + 1);
+            var total = num1 + num2 + num3;
+            if (num1 == num2 && num2 == num3) {
+                msg = "豹子通殺!!";
+            }
+            else {
+                msg += total % 2 == 0 ? "雙 " : "單 ";
+                msg += total + "點 ";
+                msg += total >= 4 && total <= 10 ? "小" : "大";
+
+                switch (total) {
+                    case 4:
+                    case 17:
+                        msg += " 賠70倍";
+                        break;
+                    case 5:
+                    case 16:
+                        msg += " 賠35倍";
+                        break;
+                    case 6:
+                    case 15:
+                        msg += " 賠20倍";
+                        break;
+                    case 7:
+                    case 14:
+                        msg += " 賠13倍";
+                        break;
+                    case 8:
+                    case 13:
+                        msg += " 賠10倍";
+                        break;
+                    case 9:
+                    case 12:
+                        msg += " 賠8倍";
+                        break;
+                    case 10:
+                    case 11:
+                        msg += " 賠7倍";
+                        break;
+                }
+            }
+
+            document.getElementById("dice1").src = "Images/dice-" + num1 + ".png";
+            document.getElementById("dice2").src = "Images/dice-" + num2 + ".png";
+            document.getElementById("dice3").src = "Images/dice-" + num3 + ".png";
+            document.getElementById("result").innerText = msg;
+        }
+    </script>
+</body>
+</html>

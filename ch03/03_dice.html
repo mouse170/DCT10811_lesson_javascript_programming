@@ -10,19 +10,19 @@
 
 <body>
 
-    <img id="dice1" src="ch03/Images/dice-1.png" />
-    <img id="dice2" src="ch03/Images/dice-1.png" />
-    <img id="dice3" src="ch03/Images/dice-1.png" /><br />
+    <img id="dice1" src="/Images/dice-1.png" />
+    <img id="dice2" src="/Images/dice-1.png" />
+    <img id="dice3" src="/Images/dice-1.png" /><br />
     <input id="Button1" type="button" value="骰" onclick="start();" />
     <input id="Button2" type="button" value="停" onclick="stop();" />
     <h3 id="result"></h3>
 
-    <img width="600" src="ch03/Images/photo_e08_07.jpg" />
+    <img width="600" src="/Images/photo_e08_07.jpg" />
     <script>
         function start() {
-            document.getElementById("dice1").src = "ch03/Images/roll.gif";
-            document.getElementById("dice2").src = "ch03/Images/roll.gif";
-            document.getElementById("dice3").src = "ch03/Images/roll.gif";
+            document.getElementById("dice1").src = "/Images/roll.gif";
+            document.getElementById("dice2").src = "/Images/roll.gif";
+            document.getElementById("dice3").src = "/Images/roll.gif";
         }
 
         function stop() {
@@ -67,9 +67,9 @@
                         break;
                 }
             }
-            document.getElementById("dice1").src = "ch03/Images/dice-" + num1 + ".png";
-            document.getElementById("dice2").src = "ch03/Images/dice-" + num2 + ".png";
-            document.getElementById("dice3").src = "ch03/Images/dice-" + num3 + ".png";
+            document.getElementById("dice1").src = "/Images/dice-" + num1 + ".png";
+            document.getElementById("dice2").src = "/Images/dice-" + num2 + ".png";
+            document.getElementById("dice3").src = "/Images/dice-" + num3 + ".png";
             document.getElementById("result").innerText = msg;
 
             /*

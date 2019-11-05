@@ -31,26 +31,33 @@
       // console.log(ar.pop()); //Spring
 
       //demo4 queue: FIFO
-    //   var ar = [];
-    //   ar.push("Spring");
-    //   ar.push("Summer");
-    //   ar.push("Autumn");
-    //   ar.push("Winter");
+      //   var ar = [];
+      //   ar.push("Spring");
+      //   ar.push("Summer");
+      //   ar.push("Autumn");
+      //   ar.push("Winter");
 
-    //   console.log(ar.shift()); //Spring
-    //   console.log(ar.shift()); //Summer
-    //   console.log(ar.shift()); //Autumn
-    //   console.log(ar.shift()); //Winter
-    //   console.log(ar.length); //0
+      //   console.log(ar.shift()); //Spring
+      //   console.log(ar.shift()); //Summer
+      //   console.log(ar.shift()); //Autumn
+      //   console.log(ar.shift()); //Winter
+      //   console.log(ar.length); //0
 
-    //demo5 sort
-    var ar = [1, 5, 2, 6, 9];
-    console.log(ar); //1, 5, 2, 6, 9
-    ar.sort();
-    console.log(ar); //1, 2, 5, 6, 9
-    ar.reverse();
-    console.log(ar); //9, 6, 5, 2, 1
+      //demo5 sort
+    //   var ar = [1, 5, 2, 6, 9];
+    //   console.log(ar); //1, 5, 2, 6, 9
+    //   ar.sort();
+    //   console.log(ar); //1, 2, 5, 6, 9
+    //   ar.reverse();
+    //   console.log(ar); //9, 6, 5, 2, 1
+        //demo6 sort指向
+    var ar = [12, 151, 2, 64, 19];
+    console.log(ar.toString());
 
+    ar.sort((a,b)=>a-b);
+    console.log(ar.toString());
+    ar.sort((a,b)=>b-a);
+    console.log(ar.toString());
     </script>
   </body>
 </html>

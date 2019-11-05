@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>09_closure</title>
+  </head>
+  <body>
+    <script>
+      function double(i) {
+        return function() {
+          var x = i * 2;
+          console.log("x= "+x);
+        };
+      };
+      var calc = double(10);
+      calc(); //20
+    </script>
+  </body>
+</html>

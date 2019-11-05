@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>08_delegate</title>
+  </head>
+  <body>
+    <script>
+      //1. 準備二個函式
+      function double(x) {
+        return x * 2;
+      }
+      function multi(x) {
+        return x * x;
+      }
+
+      //2. 準備delegate function
+      function calc(functionName, arg) {
+        return functionName(arg);
+      }
+
+      //3. test code
+      var result = calc(double, 5);
+      console.log(result); //10
+      var result2 = calc(multi, 5);
+      console.log(result2); //25
+      var result3 = calc(function(x) {
+        return x + 1;
+      }, 5);
+      console.log(result3); //6
+      var result4 = calc(x => x + 2, 5);
+      console.log(result4); //7
+    </script>
+  </body>
+</html>

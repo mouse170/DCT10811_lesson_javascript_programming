@@ -20,16 +20,28 @@
         // console.log(ar.join("$")); //Mary$100$Tue Jan 02 2018 00:00:00 GMT+0800 (Taipei Standard Time) 04_array_function.html:20:17
 
         //demo3 stack: FILO
+        // var ar = [];
+        // ar.push("Spring");
+        // ar.push("Summer");
+        // ar.push("Autumn");
+        // ar.push("Winter");
+        // console.log(ar.pop()); //Winter
+        // console.log(ar.pop()); //Autumn
+        // console.log(ar.pop()); //Summer
+        // console.log(ar.pop()); //Spring
+        
+        //demo4 queue: FIFO
         var ar = [];
         ar.push("Spring");
         ar.push("Summer");
         ar.push("Autumn");
         ar.push("Winter");
-        console.log(ar.pop()); //Winter
-        console.log(ar.pop()); //Autumn
-        console.log(ar.pop()); //Summer
-        console.log(ar.pop()); //Spring
-        
+
+        console.log(ar.shift()); //Spring
+        console.log(ar.shift()); //Summer
+        console.log(ar.shift()); //Autumn
+        console.log(ar.shift()); //Winter
+        console.log(ar.length); //0
         </script>
 </body>
 </html>

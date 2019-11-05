@@ -11,9 +11,14 @@
         var ar = ["Mary", 100, new Date("2018/1/2")];
 
         //demo1
-        console.log(ar.toString()); //Mary, 100, Thu Jan 2 00:00:00 UTC 2018
-        console.log(ar.valueOf());
-        console.log(ar);
+        // console.log(ar.toString()); //Mary, 100, Thu Jan 2 00:00:00 UTC 2018
+        // console.log(ar.valueOf());
+        // console.log(ar);
+
+        //demo2
+        console.log(ar.join("-")); //Mary-100-Thu Jan 2 00:00:00 UTC 2018 
+        console.log(ar.join("$")); //Mary$100$Tue Jan 02 2018 00:00:00 GMT+0800 (Taipei Standard Time) 04_array_function.html:20:17
+        
         </script>
 </body>
 </html>

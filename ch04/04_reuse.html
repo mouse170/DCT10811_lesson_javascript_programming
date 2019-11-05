@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04_reuse</title>
+</head>
+<body>
+                total += scores[i];
+    x = <input id="Text1" type="text" value="10" /> <br />
+    y = <input id="Text2" type="text" value="20" /> <br />
+    <input id="Button1" type="button" value="Add" onclick="test();" />
+    <h2 id="result">...</h2>
+
+    min = <input id="Text3" type="text" value="1" /> <br />
+    max = <input id="Text4" type="text" value="100" /> <br />
+    <input id="Button2" type="button" value="getTotal" onclick="test2();" />
+    <h2 id="result2">...</h2>
+    <script src="scripts/utils.js"></script>
+    <script>
+        function test() {
+            var num1 = parseInt(document.getElementById("Text1").value);
+            var num2 = parseInt(document.getElementById("Text2").value);
+
+            var result = add(num1, num2);
+            document.getElementById("result").innerText = result;
+
+        }
+        function test2() {
+            var num1 = parseInt(document.getElementById("Text3").value);
+            var num2 = parseInt(document.getElementById("Text4").value);
+
+            var result = getTotal(num1, num2);
+            document.getElementById("result2").innerText = result;
+        }
+        </script>
+</body>
+    
+</html>

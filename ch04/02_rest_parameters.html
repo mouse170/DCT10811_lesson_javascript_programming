@@ -17,15 +17,26 @@
         
 
         //demo2, arguments
-        function add() {
+        // function add() {
+        //     var total = 0;
+        //     for (var i; i < arguments.length; i++) {
+        //         total += arguments[i];
+        //     }
+        //     return total;
+        // }
+        // var result = add(100, 20, 30);
+        // console.log("Result = " + result);
+
+        //demo3, arguments
+        function add(name) {
             var total = 0;
-            for (var i; i < arguments.length; i++) {
+            for (var i = 1; i < arguments.length; i++) {
                 total += arguments[i];
             }
-            return total;
+            return name + "這次總分 = " + total;
         }
-        var result = add(100, 20, 30);
-        console.log("Result = " + result);
+        var result = add("小明", 100, 20, 30);
+        console.log(result);
         </script>
 </body>
 </html>

@@ -8,22 +8,23 @@
   </head>
   <body>
     <script>
-    var employee ={
-        id:1,
+      var employee = {
+        id: 1,
         empName: "mary",
         age: 30,
         married: true
-    }
-    for (p of employee) {
+      };
+      for (p of employee) {
+      }
+      //demo1 TypeError: employee is not iterable
+      // var id = employee.id;
+      // var empName = employee.empName;
+      //demo2,
+      let { id, empName, ...other } = employee;
 
-    }
-    //demo1 TypeError: employee is not iterable
-    var id = employee.id;
-    var empName = employee.empName;
-
-    console.log(id);
-    console.log(empName);
-    console.log(other);
+      console.log(id);
+      console.log(empName);
+      console.log(other);
     </script>
   </body>
 </html>

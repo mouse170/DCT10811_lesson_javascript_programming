@@ -18,9 +18,9 @@
         // console.log(ar.toString());
 
         //demo2 from
-        function getArray() {
-            console.log(arguments);
-            return Array.from(arguments);    
+        // function getArray() {
+        //     console.log(arguments);
+        //     return Array.from(arguments);    
             /*
             Arguments
 ​
@@ -38,8 +38,8 @@
             ​
             <prototype>: Object { … }
             */
-        }
-        var result = getArray(1, 2, 3);
+        // }
+        // var result = getArray(1, 2, 3);
         /*
         3) […]
 ​
@@ -53,7 +53,12 @@
         ​
         <prototype>: Array []
         */
-        console.log(result);
+        // console.log(result);
+        //demo3 find
+        var ar = [10, 5, 25, 75, 56, 96];
+        ar.fill(100);
+        console.log(ar); //[100, 100, 100, 100, 100]
+
 
     </script>
 </body>

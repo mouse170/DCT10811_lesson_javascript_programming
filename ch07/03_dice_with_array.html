@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>03_dice_with_array</title>
+    
+</head>
+<body>
+
+    <img id="dice1" src="Images/dice-1.png" />
+    <img id="dice2" src="Images/dice-1.png" />
+    <img id="dice3" src="Images/dice-1.png" /><br />
+    <input id="Button1" type="button" value="骰" onclick="start();" />
+    <input id="Button2" type="button" value="停" onclick="stop();" />
+    <h3 id="result"></h3>
+
+    <img width="600" src="Images/photo_e08_07.jpg" />
+    <script src="03_dice_with_array.js"></script>
+    <script>
+        function start() {
+            document.getElementById("dice1").src = "Images/roll.gif";
+            document.getElementById("dice2").src = "Images/roll.gif";
+            document.getElementById("dice3").src = "Images/roll.gif";
+        }
+        function stop() {
+            var result = getDice();
+            var [msg, num1, num2, num3] = result;
+            document.getElementById("dice1").src = "Images/dice-" + num1 + ".png";
+            document.getElementById("dice2").src = "Images/dice-" + num2 + ".png";
+            document.getElementById("dice3").src = "Images/dice-" + num3 + ".png";
+            document.getElementById("result").innerText = msg;
+            }
+    </script>
+</body>
+</html>

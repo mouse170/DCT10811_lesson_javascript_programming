@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>05_location</title>
+  </head>
+  <body>
+    <a href="05_location.html?id=5&name=John#header1">05_location.html</a>
+
+    <script>
+      //window.location = "https://www.google.com/";
+
+      console.log("host = " + window.location.host);
+      console.log("hash = " + window.location.hash);
+      console.log("hostname = " + window.location.hostname);
+      console.log("href = " + window.location.href);
+      console.log("pathname = " + window.location.pathname);
+      console.log("port = " + window.location.port);
+      console.log("protocol = " + window.location.protocol);
+      console.log("search = " + window.location.search);
+
+      var queryString = location.search.substring(1);
+      var items = queryString.split("&"),
+        item = null,
+        len = items.length;
+
+      for (i = 0; i < len; i++) {
+        item = items[i].split("=");
+        console.log(item[0] + "," + item[1]);
+      }
+    </script>
+  </body>
+</html>

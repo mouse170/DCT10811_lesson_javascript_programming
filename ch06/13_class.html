@@ -24,13 +24,38 @@
         undefined
         60
       */
+      //   const Point = class {
+      //     constructor(x, y) {
+      //       this.x = x;
+      //       this.y = y;
+      //     }
+      //     toString() {
+      //       return `($this.x), $(this.y)`;
+      //     }
+      //   };
+
+      //demo3
+      /*
+        50
+        20
+        ($this.x, $(this.y))
+        Object { x: 50, y: 20 }
+        50
+        60
+      */
       const Point = class {
         constructor(x, y) {
           this.x = x;
           this.y = y;
         }
         toString() {
-          return `($this.x), $(this.y)`;
+          return `($this.x, $(this.y))`;
+        }
+        get positionX() {
+          return this.x;
+        }
+        set positionX(x) {
+          this.x = x;
         }
       };
       var p = new Point(50, 20);

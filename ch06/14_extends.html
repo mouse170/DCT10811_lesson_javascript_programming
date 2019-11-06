@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>14_extends</title>
+  </head>
+  <body>
+    <script>
+      //1, 父類別
+      const Point = class {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+        toString() {
+          return `(${this.x}, ${this.y})`;
+        }
+      };
+
+      //2, 子類別
+      class Circle extends Point {
+        constructor(x, y, r) {
+          super(x, y);
+          this.r = r;
+        }
+      }
+
+      //Test Code:
+      const c = new Circle(10, 20, 2.5);
+      console.log(c.toString()); // (10, 20)
+      console.log(c.r); // 2.5
+
+      console.log(c); //Object { x: 10, y: 20, r: 2.5 }
+    </script>
+  </body>
+</html>

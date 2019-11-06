@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>02_Delete</title>
+  </head>
+  <body>
+    <script>
+      var employee = new Object();
+      employee.empName = "Mary";
+      employee.age = 29;
+      console.log("Employee name : " + employee.empName); //Employee name : Mary
+      console.log("Employee age :" + employee.age); //Employee age :29
+      employee["married"] = true;
+      console.log("Employee name : " + employee["empName"]); //Employee name : Mary
+      console.log("Employee age :" + employee["age"]); //Employee age :29
+      console.log("Is married :" + employee["married"]); //Is married :true
+      console.log(employee.hasOwnProperty("age")); //true
+      delete employee.age;
+      console.log(employee.hasOwnProperty("age")); //false
+
+      console.log(employee);
+    </script>
+  </body>
+</html>

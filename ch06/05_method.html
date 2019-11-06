@@ -9,11 +9,20 @@
 <body>
     <script>
     //demo1
-    var employee = new Object();
-    employee.empName="Mary";
-    employee.age = 29;
-    employee.getAge = function() {
-        return this.age;
+    // var employee = new Object();
+    // employee.empName="Mary";
+    // employee.age = 29;
+    // employee.getAge = function() {
+    //     return this.age;
+    // }
+
+    //demo2
+    var employee = {
+        empName: "Mary",
+        age: 29,
+        getAge: function() {
+            return this.age;
+        }
     }
     console.log("Employee name: " + employee.empName); //Employee name: Mary
     console.log("Employee age :" + employee.age); //Employee age :29

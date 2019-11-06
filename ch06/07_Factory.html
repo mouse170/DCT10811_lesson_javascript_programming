@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07_Factory</title>
+</head>
+<body>
+    <script>
+        function createEmployee(empName, age) {
+            var employee = new Object();
+            employee.empName = empName;
+            employee.age = age;
+            employee.getAge = function() {
+                return this.age;
+            };
+            return employee;
+        }
+
+        var emp1 = createEmployee("Mary", 30);
+        var emp2 = createEmployee("Candy", 35);
+
+        console.log(emp1);
+        console.log(emp2);
+        console.log(emp1.getAge == emp2.getAge); //false
+    </script>
+</body>
+</html>

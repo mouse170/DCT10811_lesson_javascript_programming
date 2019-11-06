@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>13_class</title>
+  </head>
+  <body>
+    <script>
+      //demo1
+      class Point {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+      }
+      var p = new Point(50, 20);
+      console.log(p.x);
+      console.log(p.y);
+      console.log(p.toString()); //
+      console.log(p);
+
+      console.log(p.positionX);
+      p.positionX = 60;
+      console.log(p.positionX);
+    </script>
+  </body>
+</html>

@@ -10,12 +10,51 @@
     <script>
         //demo1 of
         //var ar = new Array(10);
-        var ar = new Array(10, 20);
+        // var ar = new Array(10, 20);
         //var ar = Array.of(10);
         //var ar = Array.of(10, 20);
 
-        console.log(ar.length); //1
-        console.log(ar.toString());
+        // console.log(ar.length); //1
+        // console.log(ar.toString());
+
+        //demo2 from
+        function getArray() {
+            console.log(arguments);
+            return Array.from(arguments);    
+            /*
+            Arguments
+​
+            0: 1
+            ​
+            1: 2
+            ​
+            2: 3
+            ​
+            callee: function getArray()
+            ​
+            length: 3
+            ​
+            Symbol(Symbol.iterator): function values()
+            ​
+            <prototype>: Object { … }
+            */
+        }
+        var result = getArray(1, 2, 3);
+        /*
+        3) […]
+​
+        0: 1
+        ​
+        1: 2
+        ​
+        2: 3
+        ​
+        length: 3
+        ​
+        <prototype>: Array []
+        */
+        console.log(result);
+
     </script>
 </body>
 </html>

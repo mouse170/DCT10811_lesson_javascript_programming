@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>01_window_open</title>
+  </head>
+  <body>
+    <input type="button" id="btn1" value="Open Window" onclick="test();" />
+    <input type="button" id="btn2" value="MoveTo" onclick="test2();" />
+    <input type="button" id="btn3" value="MoveBy" onclick="test3();" />
+    <script>
+      var win;
+
+      function test() {
+        // window.open("myWindow.html", "blank");
+        win = window.open(
+          "myWindow.html",
+          "mywin",
+          "left=100,top=100,width=300,height=300"
+        )
+      }
+
+        function test2() {
+            win.moveTo(200, 200);
+        }
+
+        function test3() {
+            win.moveBy(20,20);
+        }
+      
+    </script>
+  </body>
+</html>

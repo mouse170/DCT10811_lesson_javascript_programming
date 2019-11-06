@@ -29,6 +29,22 @@
     console.log(map.has("id")); //true
     console.log(map.has("name")); //true
     console.log(map.has("age")); //false
+    // map.delete("id");
+    // map.clear();
+
+    // map.forEach(function(valuse, key, map) {
+    //     console.log(key + "," + value);
+    // });
+        for (const k of map.keys()) {
+            console.log(k + ',' + map.get(k)); //id name
+        }
+        for(const v of map.values()) {
+            console.log(v); //1 mary
+        }
+    
+
+
     </script>
+
 </body>
 </html>

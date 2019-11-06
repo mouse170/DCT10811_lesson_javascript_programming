@@ -13,10 +13,14 @@
       console.log("[" + s.trim() + "]"); //[Mary]
       console.log("[" + s.trimLeft() + "]"); // [Mary ]
       console.log("[" + s.trimRight() + "]"); //[ Mary]
-      //demo2
+      //demo2 includes
       var s = "Hi mary";
       console.log(s.includes("mary")); //true
       console.log(s.includes("Mary")); //false
+      //demo3
+      var s = "This is a book";
+      console.log(s.startsWith("This")); //true
+      console.log(s.endsWith("book")); //true
     </script>
   </body>
 </html>

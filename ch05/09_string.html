@@ -32,8 +32,19 @@
       console.log(s.toUpperCase()); //HELLO JAVASCRIPT
 
       //demo6 search
-      var s = "Mary, Candy, Lilly, Judy";
-      var pos = s.search(/Mary|Candy/);
+      //   var s = "Mary, Candy, Lilly, Judy";
+      //   var pos = s.search(/Mary|Candy/);
+      //   if (pos!= -1) {
+      //       console.log(pos); //0
+      //   }
+      //   else {
+      //       console.log("Not found!");
+      //   }
+      //demo7
+        var s = "AB1234";
+    //   var s = "ABA1234";
+    //   var pos = s.search(/[A-Z]{2}[0-9]{4}/); //1
+    var pos = s.search(/^[A-Z]{2}[0-9]{4}$/)
       if (pos!= -1) {
           console.log(pos); //0
       }

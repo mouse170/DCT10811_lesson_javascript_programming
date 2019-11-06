@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>10_encapsulation</title>
+  </head>
+  <body>
+    <script>
+      var Employee = function(empName, age) {
+        var _empName,
+          _age = 0;
+        this.getName = function() {
+          return _empName;
+        };
+        this.setName = function(empName) {
+          _empName = empName;
+        };
+        this.getAge = function() {
+          return _age;
+        };
+        this.setAge = function(age) {
+          if (age > 0 && age < 150) _age = age;
+        };
+        // 建構函式程式邏輯
+        //_empName = empName;
+        this.setName(empName);
+        this.setAge(age);
+      };
+
+      //Test Code
+      var emp1 = new Employee("John", 30);
+      var emp2 = new Employee("Candy", 35);
+
+      emp1.setName("xxx");
+      emp1.setAge(-50);
+
+      console.log(emp1.getName() + " -- " + emp1.getAge()); //xxx -- 30
+      console.log(emp2.getName() + " -- " + emp2.getAge()); //Candy -- 35
+    </script>
+  </body>
+</html>

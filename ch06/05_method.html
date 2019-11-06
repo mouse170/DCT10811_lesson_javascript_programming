@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05_method</title>
+</head>
+<body>
+    <script>
+    //demo1
+    var employee = new Object();
+    employee.empName="Mary";
+    employee.age = 29;
+    employee.getAge = function() {
+        return this.age;
+    }
+    console.log("Employee name: " + employee.empName); //Employee name: Mary
+    console.log("Employee age :" + employee.age); //Employee age :29
+    console.log("Employee age :"+ employee.getAge()); //Employee age :29
+    console.log(employee); //Object { empName: "Mary", age: 29, getAge: getAge() }
+</script>
+</body>
+</html>

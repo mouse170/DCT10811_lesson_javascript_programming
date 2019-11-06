@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11_encs_property</title>
+</head>
+<body>
+        <script>
+
+                var Employee = function (empName, age) {
+                    var _empName, _age = 0;
+        
+                    Object.defineProperties(this, {
+                        empName: {
+                            get: function () {
+                                return _empName;
+                            },
+                            set: function (newName) {
+                                _empName = newName;
+                            }
+                        },
+                        age: {
+                            get: function () {
+                                return _age;
+                            },
+                            set: function (newAge) {
+                                if (newAge > 0 && newAge < 150)
+                                    _age = newAge;
+                            }
+                        }
+                    });
+        
+                    //Object.defineProperty(this, "empName", {
+                    //    get: function () {
+                    //        return _empName;
+                    //    },
+                    //    set: function (newName) {
+                    //        _empName = newName;
+                    //    }
+                    //});
+        
+                    //Object.defineProperty(this, "age", {
+                    //    get: function () {
+                    //        return _age;
+                    //    },
+                    //    set: function (newAge) {
+                    //        if (newAge > 0 && newAge < 150)
+                    //            _age = newAge;
+                    //    }
+                    //});
+        
+                    // 建構函式程式邏輯
+                    this.empName = empName;
+                    this.age = age;
+                }
+        
+        
+                //Test Code
+                var emp1 = new Employee("John", 30);
+                var emp2 = new Employee("Candy", 35);
+        
+                emp1.empName = "xxx";
+                emp1.age = -50;
+        
+                console.log(emp1.empName + " -- " + emp1.age); //xxx -- 30
+                console.log(emp2.empName + " -- " + emp2.age); //Candy -- 35
+        
+        
+                console.log(emp1.getName == emp2.getName); //true
+        
+            </script>
+</body>
+</html>

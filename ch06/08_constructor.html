@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>08_constructor</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    //demo1
-    function Employee(empName, age) {
-        this.empName = empName;
-        this.age = age;
-        this.getAge = function() {
-            return this.age;
-        }
-    }
-    var emp1 = new Employee("John", 25);
-    var emp2 = new Employee("Mary", 30);
-    //test code
-    console.log(emp1); //Object { empName: "John", age: 25, getAge: getAge() }
-    console.log(emp2); //Object { empName: "Mary", age: 30, getAge: getAge() }
-    console.log(emp1.getAge == emp2.getAge); //false
+      //demo1
+    //   function Employee(empName, age) {
+    //     this.empName = empName;
+    //     this.age = age;
+    //     this.getAge = function() {
+    //       return this.age;
+    //     };
+    //   }
+      //demo2
+      var Employee = function(empName, age) {
+          this.empName = empName;
+          this.age = age;
+          this.getAge = function() {
+              return this.age;
+          }
+      }
+      var emp1 = new Employee("John", 25);
+      var emp2 = new Employee("Mary", 30);
+      //test code
+      console.log(emp1); //Object { empName: "John", age: 25, getAge: getAge() }
+      console.log(emp2); //Object { empName: "Mary", age: 30, getAge: getAge() }
+      console.log(emp1.getAge == emp2.getAge); //false
 
-    console.log(emp1 instanceof Object); //true
-    console.log(emp2 instanceof Object); //true
-    console.log(emp1 instanceof Employee); //true
-    console.log(emp2 instanceof Employee); //true
+      console.log(emp1 instanceof Object); //true
+      console.log(emp2 instanceof Object); //true
+      console.log(emp1 instanceof Employee); //true
+      console.log(emp2 instanceof Employee); //true
     </script>
-</body>
+  </body>
 </html>

@@ -9,40 +9,40 @@
   <body>
     <script>
       //demo1
-    //   function Employee(empName, age) {
-    //     this.empName = empName;
-    //     this.age = age;
-    //     this.getAge = function() {
-    //       return this.age;
-    //     };
-    //   }
+      //   function Employee(empName, age) {
+      //     this.empName = empName;
+      //     this.age = age;
+      //     this.getAge = function() {
+      //       return this.age;
+      //     };
+      //   }
 
-    //demo2
-    // var Employee = function(empName, age) {
-    //     this.empName = empName;
-    //     this.age = age;
-    // }
-
-    // Employee.prototype = {
-    //     constructor: Employee,
-    //     getAge() {
-    //         return this.age;
-    //     }
-    // }
-
-    //demo3
-    var Employee = function(empName, age) {
+      //demo2
+      var Employee = function(empName, age) {
         this.empName = empName;
         this.age = age;
-    }
+      };
 
-    var emp1 = new Employee("Mary", 30);
-    var emp2 = new Employee("Candy", 35);
+      Employee.prototype = {
+        constructor: Employee,
+        getAge() {
+          return this.age;
+        }
+      };
 
-    console.log(emp1); //Object { empName: "Mary", age: 30 }
-    console.log(emp2); //Object { empName: "Candy", age: 35 }
+      //demo3
+      //   var Employee = function(empName, age) {
+      //     this.empName = empName;
+      //     this.age = age;
+      //   };
 
-    console.log(emp1.getAge == emp2.getAge); //true
+      var emp1 = new Employee("Mary", 30);
+      var emp2 = new Employee("Candy", 35);
+
+      console.log(emp1); //Object { empName: "Mary", age: 30 }
+      console.log(emp2); //Object { empName: "Candy", age: 35 }
+
+      console.log(emp1.getAge == emp2.getAge); //true
     </script>
   </body>
 </html>

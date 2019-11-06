@@ -34,7 +34,18 @@
       });
       console.log(result.toString()); //[9,12,57,41,20]
 
-      
+      //demo5 forEach
+      var ar = ["Spring", "Summer", "Autumn", "Winter"];
+      ar.forEach(function(item, index, array) {
+        console.log(item + "," + index + ", [" + array + "]");
+        /*
+          Spring,0, [Spring,Summer,Autumn,Winter]
+          Summer,1, [Spring,Summer,Autumn,Winter]
+          Autumn,2, [Spring,Summer,Autumn,Winter]
+          Winter,3, [Spring,Summer,Autumn,Winter]
+        */
+      })
+
     </script>
   </body>
 </html>

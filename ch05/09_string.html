@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>09_string</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    //demo1 string
-    var s = "Hello Javascript, I Love Javascript, I Hate Javascript!!";
-    console.log(s.length); //56
-    console.log(s);
+      //demo1 string
+      var s = "Hello Javascript, I Love Javascript, I Hate Javascript!!";
+      console.log(s.length); //56
+      console.log(s);
 
-    //demo2 substring vs substr
-    console.log(s.substring(2, 3)); //l
-    console.log(s.substr(2, 3)); //llo
+      //demo2 substring vs substr
+      console.log(s.substring(2, 3)); //l
+      console.log(s.substr(2, 3)); //llo
 
-    //demo3 indexOf vs lastIndexOf
-    console.log(s.indexOf("Javascript")); //6
-    console.log(s.indexOf("Javascript", 7)); //25
-    console.log(s.lastIndexOf("Javascript")); //44
+      //demo3 indexOf vs lastIndexOf
+      console.log(s.indexOf("Javascript")); //6
+      console.log(s.indexOf("Javascript", 7)); //25
+      console.log(s.lastIndexOf("Javascript")); //44
 
-
+      //demo4 trim 去空格
+      var s = "Hello JavaScript ";
+      console.log("[" + s + "]"); //[ Hello Javascript ]
+      console.log("[" + s.trim() +"]"); //[Hello Javascript]
     </script>
-</body>
+  </body>
 </html>

@@ -9,12 +9,30 @@
   <body>
     <script>
       //demo1
-      class Point {
+      //   class Point {
+      //     constructor(x, y) {
+      //       this.x = x;
+      //       this.y = y;
+      //     }
+      //   }
+      //demo2
+      /*
+        50
+        20
+        ($this.x), $(this.y)
+        Object { x: 50, y: 20 }
+        undefined
+        60
+      */
+      const Point = class {
         constructor(x, y) {
           this.x = x;
           this.y = y;
         }
-      }
+        toString() {
+          return `($this.x), $(this.y)`;
+        }
+      };
       var p = new Point(50, 20);
       console.log(p.x);
       console.log(p.y);

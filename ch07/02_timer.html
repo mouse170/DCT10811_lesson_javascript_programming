@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>02_timer</title>
+  </head>
+  <body>
+    <input id="Button1" type="button" value="TimeOut Start" onclick="test();" />
+    <input id="Button2" type="button" value="TimeOut Stop" onclick="test2();" />
+    <input
+      id="Button3"
+      type="button"
+      value="Interval Start"
+      onclick="test3();"
+    />
+    <input
+      id="Button4"
+      type="button"
+      value="Interval Stop"
+      onclick="test4();"
+    />
+    <script>
+      var id;
+      function test() {
+        id = setTimeout(() => {
+          var t = new Date().toString();
+          alert(t);
+        }, 2000);
+      }
+
+      function test2() {
+          clearTimeout(id);
+      }
+
+      function test3() {
+          id = setInterval(function(){
+              var t = new Date().toString();
+              console.log(t);
+          }, 1000);
+      }
+
+      function test4() {
+          clearTimeout(id);
+      }
+    </script>
+  </body>
+</html>

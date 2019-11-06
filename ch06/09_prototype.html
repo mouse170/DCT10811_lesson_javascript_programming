@@ -18,16 +18,22 @@
     //   }
 
     //demo2
+    // var Employee = function(empName, age) {
+    //     this.empName = empName;
+    //     this.age = age;
+    // }
+
+    // Employee.prototype = {
+    //     constructor: Employee,
+    //     getAge() {
+    //         return this.age;
+    //     }
+    // }
+
+    //demo3
     var Employee = function(empName, age) {
         this.empName = empName;
         this.age = age;
-    }
-
-    Employee.prototype = {
-        constructor: Employee,
-        getAge() {
-            return this.age;
-        }
     }
 
     var emp1 = new Employee("Mary", 30);

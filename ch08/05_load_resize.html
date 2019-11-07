@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>04_event_method</title>
+  </head>
+  <body>
+    <div id="div1">
+      <a href="https://www.google.com/" id="a1">Google</a>
+    </div>
+    <script>
+      document.querySelector("#a1").addEventListener("click", (event) => {
+          alert("a1_click v1 ...")
+          //1. 阻止事件發生
+          //event.stopPropagation();
+          event.stopImmediatePropagation();
+          //2. 阻止預設行為
+          event.preventDefault();
+      });
+      document.querySelector("#a1").addEventListener("click", (event) => {
+          alert("a1_click v2 ...");
+      })
+      document.querySelector("#div1").addEventListener("click", (event) => {
+          alert("div1_click ...");
+      })
+      document.querySelector("body").addEventListener("click", (event) => {
+          alert("body_click...");
+      })
+      
+    </script>
+  </body>
+</html>

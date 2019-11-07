@@ -10,6 +10,8 @@
     <div id="div1">
       <a href="https://www.google.com/" id="a1">Google</a>
     </div>
+
+    <div id="div2"></div>
     <script>
       document.querySelector("#a1").addEventListener("click", (event) => {
           alert("a1_click v1 ...")
@@ -27,7 +29,12 @@
       })
       document.querySelector("body").addEventListener("click", (event) => {
           alert("body_click...");
-      })
+      }, false);
+
+      window.addEventListener('resize', function(event) {
+        var div2 = document.getElementById("div2");
+        div2.innerText = "innerWidth :" + window.innerWidth + "innerHeight: " + window.innerHeight;
+      });
       
     </script>
   </body>

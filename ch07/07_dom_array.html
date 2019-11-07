@@ -38,7 +38,15 @@
     </form>
 
     <script>
-
+        for (var i = 0; i <document.forms.length; i++) {
+            console.log(document.forms[i].id);
+        }
+        for (var i = 0; i <document.images.length; i++) {
+            document.images[i].style.border = "3px solid red";
+        }
+        for (var i = 0; i <document.links.length; i++) {
+            document.links[i].style.border = "3px solid blue";
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>07_mouse_event</title>
+    <style>
+      #div1 {
+        border: 1px dashed blue;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+
+    <div id="result"></div>
+
+    <script>
+      var div1 = document.getElementById("div1");
+      div1.addEventListener("mouseenter", function(event) {
+        // ㄋvar result = document.getElementById("result");
+        result.innerText = "Mouse Enter";
+      });
+      div1.addEventListener("mousemove", function(event) {
+        // var result = document.getElementById("result");
+        result.innerText = "X: " + event.x + "Y: " + event.y;
+      });
+      div1.addEventListener("mouseleave", function(event) {
+        // var result = document.getElementById("result");
+        result.innerText = "Mouse Leave";
+      });
+    </script>
+  </body>
+</html>

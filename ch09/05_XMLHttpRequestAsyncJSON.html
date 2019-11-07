@@ -6,10 +6,14 @@
 </head>
 <body>
 
-    URL : <input id="txtUrl" type="text" value="Sample.html" />
+    URL : <input id="txtUrl" type="text" value="SampleJSON.aspx?filter=123" />
+
     <input id="Button1" type="button" value="Request" />
+
+    <input id="txt" type="text" value="" />
     <hr />
     <div id="result">...</div>
+    <ul id="list1"></ul>
 
     <script>
 
@@ -24,8 +28,14 @@
                     if (req.readyState == 4) {
 
                         if (req.status == 200) {
+                            //6,
+                            var data = JSON.parse(req.responseText);
+                            for (var i = 0; i < data.d.length; i++) {
 
-                            document.getElementById("result").innerHTML = req.responseText;
+                                var li = document.createElement("li");
+                                li.innerText = data.d[i].name + " -- " + data.d[i].age;
+                                document.getElementById("list1").appendChild(li);
+                            }
                         }
                         else {
                             alert(req.status + " -- " + req.statusText);
@@ -38,8 +48,8 @@
                 req.open("GET", url, true);
                 //3,
                 req.send();
- 
-               
+
+
             };
 
         }

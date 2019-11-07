@@ -10,6 +10,7 @@ public partial class SampleJSON : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Response.Clear();
+        System.Threading.Thread.Sleep(3000);
         Response.ContentType = @"application/json";
         string s = Request.Params["filter"] != null ? Request.Params["filter"].ToLower() : "all";
         if (s == "all")

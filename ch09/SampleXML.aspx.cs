@@ -10,7 +10,8 @@ public partial class SampleXML : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Response.Clear();
-        Response.Write("<h1>I am Sample.aspx -- " + DateTime.Now.Millisecond + "</h1>");
+        Response.ContentType = "text/xml";
+        Response.Write("<?xml version='1.0'?><employees><employee><id>1</id><name>mary</name></employee ></employees>");
         Response.End();
     }
 }

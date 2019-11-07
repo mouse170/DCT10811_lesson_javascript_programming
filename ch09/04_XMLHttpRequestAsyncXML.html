@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    URL : <input id="txtUrl" type="text" value="Sample.html" />
+    URL : <input id="txtUrl" type="text" value="SampleXML.aspx" />
     <input id="Button1" type="button" value="Request" />
     <hr />
     <div id="result">...</div>
@@ -24,8 +24,11 @@
                     if (req.readyState == 4) {
 
                         if (req.status == 200) {
-
-                            document.getElementById("result").innerHTML = req.responseText;
+                            //6,
+                            var doc = req.responseXML;
+                            document.getElementById("result").innerHTML =
+                                doc.childNodes[0].childNodes[0].childNodes[0].textContent + ","
+                                + doc.childNodes[0].childNodes[0].childNodes[1].textContent;
                         }
                         else {
                             alert(req.status + " -- " + req.statusText);

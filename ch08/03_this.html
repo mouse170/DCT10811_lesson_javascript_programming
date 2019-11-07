@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>03_this</title>
-</head>
-<body id="body1">
-    <input id="Button3 type="button" value="button" />
+  </head>
+  <body id="body1">
+    <input id="Button3" type="button" value="button" />
     <script>
-    document.body.addEventListener("click",
-    handler = () => {
-        console.log("body-this:" + this.id);
-        console.log("body-target:" +event.target.id);
-        console.log("body-currentTarget" +event.currentTarget.id);
-    }, true);
-    document.body.addEventListener("click", handler, false);
-    
+      document.body.addEventListener(
+        "click",
+        (handler = () => {
+          console.log("body-this:" + this.id);
+          console.log("body-target:" + event.target.id);
+          console.log("body-currentTarget" + event.currentTarget.id);
+        }),
+        true
+      );
+      document.body.addEventListener("click", handler, false);
+
+      //DOM Level 2
+      document.querySelector("#Button3").addEventListener("click",
+      (event) => {
+          console.log("this:" + this.id)
+          console.log("target:" + event.target.id);
+          console.log("currentTarget:" + event.currentTarget.id);
+          function test() {
+              console.log(this.id);
+              console.log(event.target.id);
+          }
+          test();
+      }, false);
     </script>
-    
-    
-</body>
+  </body>
 </html>

@@ -97,17 +97,23 @@
       console.log(item); //<label class="lbl txt" for="first-name" style="background-color: lightblue;">
 
       //demo5 querySelectorAll
-      var item = document.querySelectorAll(".lbl");
-      for (var i = 0; i < item.length; i++) {
-        console.log(item[i]);
-        /*
-            <label class="lbl txt" for="first-name" style="background-color: lightblue;">
-            <label class="lbl" for="last-name" style="background-color: lightblue;">
-            <label class="lbl" for="email-address" style="background-color: lightblue;">
-            <label class="lbl" for="password" style="background-color: lightblue;">
-            <label class="lbl" for="confirm-password" style="background-color: lightblue;">
-            <label class="lbl" for="website" style="background-color: lightblue;">
-            */
+      //   var item = document.querySelectorAll(".lbl");
+      //   for (var i = 0; i < item.length; i++) {
+      //     console.log(item[i]);
+      //     /*
+      //         <label class="lbl txt" for="first-name" style="background-color: lightblue;">
+      //         <label class="lbl" for="last-name" style="background-color: lightblue;">
+      //         <label class="lbl" for="email-address" style="background-color: lightblue;">
+      //         <label class="lbl" for="password" style="background-color: lightblue;">
+      //         <label class="lbl" for="confirm-password" style="background-color: lightblue;">
+      //         <label class="lbl" for="website" style="background-color: lightblue;">
+      //         */
+      //   }
+      //demo6
+      //   var item = document.getElementById("input");
+      var items = document.querySelectorAll("input[type='text']");
+      for (var i = 0; i < items.length; i++) {
+        items[i].style.backgroundColor = "yellow";
       }
     </script>
   </body>

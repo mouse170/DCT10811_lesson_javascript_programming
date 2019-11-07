@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>10_dom_appendChild</title>
 </head>
 <body>
 
@@ -24,6 +24,12 @@
 
     </select>
 
-    <script></script>
+    <script>
+        function test() {
+            var li = document.createElement("li");
+            li.innerText = document.getElementById("Text1").value; //<li></li>
+            document.getElementById("list1").appendChild(li);
+        }
+    </script>
 </body>
 </html>

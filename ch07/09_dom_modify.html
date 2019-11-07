@@ -5,9 +5,9 @@
     <title></title>
 </head>
 <body>
-    <a href="05_dialog.html">05_dialog.html</a>
-    <a href="06_location.html">06_location.html</a>
-    <a href="07_title.html">07_title.html</a>
+    <a href="04_dialog.html">05_dialog.html</a>
+    <a href="05_location.html">06_location.html</a>
+    <a href="06_title.html">07_title.html</a>
 
     <img src="Images/dice-1.png" width="100" />
     <img src="Images/dice-2.png" width="100" />
@@ -38,7 +38,15 @@
     </form>
 
     <script>
+        //create element
+        var newHeader = document.createElement("h1"); 
+        newHeader.id = "myheader";
+        newHeader.innerHTML = "My Header";
+        newHeader.style.border = "solid 2px green";
+        newHeader.style.textAlign = "center";
+        newHeader.style.backgroundcolor = "lightblue";
 
+        document.body.insertBefore(newHeader, document.forms.form1);
     </script>
 </body>
 </html>

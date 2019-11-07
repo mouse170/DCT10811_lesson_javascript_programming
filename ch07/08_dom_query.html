@@ -83,13 +83,31 @@
       var item = document.getElementById("first-name");
       item.value = "John";
       console.log(item); //<input id="first-name" type="text" name="FirstName" value="Mary">
-      //demo2 getElementByName
+      //demo2 getElementsByName
       var item = document.getElementsByName("FirstName");
       console.log(item); //NodeList [ input#first-name ]
-      //demo3
+      //demo3 getelementsByClassName
       var items = document.getElementsByClassName("lbl");
       for (var i = 0; i < items.length; i++) {
         items[i].style.backgroundColor = "lightblue";
+      }
+      //demo4 querySelector
+      //   var item = document.querySelector("#first-name");
+      var item = document.querySelector(".lbl");
+      console.log(item); //<label class="lbl txt" for="first-name" style="background-color: lightblue;">
+
+      //demo5 querySelectorAll
+      var item = document.querySelectorAll(".lbl");
+      for (var i = 0; i < item.length; i++) {
+        console.log(item[i]);
+        /*
+            <label class="lbl txt" for="first-name" style="background-color: lightblue;">
+            <label class="lbl" for="last-name" style="background-color: lightblue;">
+            <label class="lbl" for="email-address" style="background-color: lightblue;">
+            <label class="lbl" for="password" style="background-color: lightblue;">
+            <label class="lbl" for="confirm-password" style="background-color: lightblue;">
+            <label class="lbl" for="website" style="background-color: lightblue;">
+            */
       }
     </script>
   </body>

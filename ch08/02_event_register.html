@@ -10,6 +10,7 @@
     <input id="Button1" type="button" value="button" onclick="test();" />
     <input id="Button2" type="button" value="button" />
     <input id="Button3" type="button" value="button" />
+    <input id="Button4" type="button" value="remove body click event" />
     <script>
       function test() {
         alert("test...");
@@ -22,6 +23,21 @@
       document
         .querySelector("#Button3")
         .addEventListener("click", () => alert("test3"), false);
+      //capture
+      document.body.addEventListener(
+        "click",
+        (handler1 = () => alert("'body'")),
+        true
+      );
+      document.querySelector("#Button4").addEventListener(
+        "click",
+        () => {
+          //remove body click event
+          document.body.removeEventListener("click", handler1, true);
+          alert("remove body event");
+        },
+        false
+      );
     </script>
   </body>
 </html>

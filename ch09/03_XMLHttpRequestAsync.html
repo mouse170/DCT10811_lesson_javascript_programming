@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>03_XMLHttpRequestAsync</title>
+  </head>
+  <body>
+    <input id="txtUrl" type="text" value="http://localhost:3000/d" />
+    <input id="Button1" type="button" value="Request" />
+    <hr />
+    <div id="result">...</div>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("Button1").onclick = function () {
+                //1
+                var req = new XMLHttpRequest();
+
+                req.onreadystatechange = () => {
+                    if(req.readyState==4) {
+                        if(req.status==200) {
+                            document.getElementById("result").innerHTML = req.responseText;
+
+                        }
+                        else { 
+                            console.log(req.status + "--" + req.statusText);
+                        }
+                    }
+                };
+
+                //2
+                var url = document.getElementById("txtUrl").value;
+                req.open("GET", url, true);
+                //3
+                req.send();
+            };
+        }        
+    </script>
+  </body>
+</html>

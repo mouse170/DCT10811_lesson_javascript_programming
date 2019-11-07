@@ -8,10 +8,11 @@
   </head>
   <body>
     <script>
-      var employee = {
-          name: "Mary",
-          age: 25
-      };
+      //demo1
+      //   var employee = {
+      //       name: "Mary",
+      //       age: 25
+      //   };
 
       /*<employee>
           <name>Mary</name>
@@ -20,11 +21,32 @@
 
       <employee name="Mary"age="25"></employee>*/
       //demo1 JSON
-      var data = JSON.stringify(employee);
-      console.log(data); //{"name":"Mary","age":25}
+      //   var data = JSON.stringify(employee);
+      //   console.log(data); //{"name":"Mary","age":25}
 
-      var obj = JSON.parse(data);
-      console.log(obj.name + "--" + obj.age); //Mary--25
+      //   var obj = JSON.parse(data);
+      //   console.log(obj.name + "--" + obj.age); //Mary--25
+
+      //demo2
+      var employees = [
+        { name: "mary", age: 25 },
+        { name: "candy", age: 50 },
+        { name: "lilly", age: 30 }
+      ];
+
+      var data = JSON.stringify(employees);
+      console.log(data); //[{"name":"mary","age":25},{"name":"candy","age":50},{"name":"lilly","age":30}]
+
+      var obj = JSON.parse(data); //
+      for (var i = 0; i < obj.length; i++) {
+          console.log(obj[i].name + "--" + obj[i].age);
+          /*
+          mary--25
+          candy--50
+          lilly--30
+          */
+      }
+      
     </script>
   </body>
 </html>

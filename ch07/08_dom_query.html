@@ -2,7 +2,26 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>08_dom_query</title>
+    <style>
+        a { 
+            border: 2px dotted red;
+        }
+
+        input {
+
+        }
+
+        #first-name {
+            color: blue;
+        }
+        .lbl {
+            color: green;
+        }
+        .txt {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
     <a href="05_dialog.html">05_dialog.html</a>
@@ -38,7 +57,10 @@
     </form>
 
     <script>
-
+        //demo1 getElementById
+        var item = document.getElementById("first-name");
+        item.value = "John";
+        console.log(item);
     </script>
 </body>
 </html>

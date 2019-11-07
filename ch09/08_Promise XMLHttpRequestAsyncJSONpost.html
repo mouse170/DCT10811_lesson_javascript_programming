@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="SampleJSON.aspx" />
+
+    <input id="Button1" type="button" value="Request" />
+
+    <input id="txt" type="text" value="" />
+    <hr />
+    <div id="result">...</div>
+    <ul id="list1"></ul>
+
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("Button1").onclick = function () {
+                var p = new Promise((resolve, reject) => {
+                    //1,
+                    var req = new XMLHttpRequest();
+                    req.onload = () => {
+                        if (req.status == 200) {
+                            resolve(req.responseText);
+                        }
+                        else {
+                            reject(req.status + " -- " + req.statusText);
+                        }
+                    };
+                    //2,
+                    var url = document.getElementById("txtUrl").value;
+                    req.open("POST", url, true);
+                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    //3,
+                    req.send("filter=all");
+                });
+
+                p.then(resp => {
+                    //6,
+                    var data = JSON.parse(resp);
+                    for (var i = 0; i < data.d.length; i++) {
+                        var li = document.createElement("li");
+                        li.innerText = data.d[i].name + " -- " + data.d[i].age;
+                        document.getElementById("list1").appendChild(li);
+                    }
+                }, err => {
+                    alert(err);
+                });
+            };
+
+        }
+    </script>
+</body>
+</html>

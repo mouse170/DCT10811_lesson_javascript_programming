@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>01_event_bubble</title>
+  </head>
+  <body onclick="body_click();">
+      <div onclick="div_click();">
+        <a href="https://www.google.com" onclick="a_click();">Google</a>
+    </div>
+    <script>
+      function a_click() {
+        alert("a_click...");
+      }
+      function div_click() {
+        alert("div_click...");
+      }
+      function body_click() {
+        alert("body_click...");
+      }
+    </script>
+  </body>
+</html>

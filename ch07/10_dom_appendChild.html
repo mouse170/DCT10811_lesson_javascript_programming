@@ -30,6 +30,13 @@
             li.innerText = document.getElementById("Text1").value; //<li></li>
             document.getElementById("list1").appendChild(li);
         }
+
+        function test2() {
+            var opt = document.createElement("option"); //<option></option>
+            opt.innerText = document.getElementById("Text1").value;
+            opt.value = "5";
+            document.getElementById("Select1").appendChild(opt);
+        }
     </script>
 </body>
 </html>
